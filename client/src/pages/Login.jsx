@@ -37,7 +37,7 @@ const handleSubmit = async (e)=>{
   return (
     <div className="h-[84vh] bg-cyan-700 px-12 py-8 flex items-center justify-center">
       <div className="bg-cyan-950 rounded-lg px-8 py-5 w-full md:w-3/6 lg:w-2/6">
-      <p className="text-cyan-400 text-xl mb-5">Register</p>
+      <p className="text-cyan-400 text-xl mb-5">Log In</p>
         <form className="max-w-md mx-auto">
           <div className="relative z-0 w-full mb-5 group">
             <input
