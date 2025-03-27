@@ -1,5 +1,5 @@
 import React from 'react'
-import {Routes, Route, BrowserRouter as Router} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
 import Home from './pages/Home'
@@ -9,7 +9,6 @@ import Register from './pages/Register';
 const App = () => {
   return (
     <div>
-      <Router>
       <Navbar></Navbar>
       <Routes>
         <Route exact path="/" element={<Home/>}></Route>
@@ -18,7 +17,6 @@ const App = () => {
         <Route path="/register" element={<Register/>}></Route>
       </Routes>
       <Footer></Footer>
-      </Router>
     </div>
   )
 }

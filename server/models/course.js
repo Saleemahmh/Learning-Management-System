@@ -15,6 +15,14 @@ const courseSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    price: {
+      type: String,
+      required: true,
+    },
+    instructor: {
+      type: String,
+      required: true,
+    },
   },
   { timestamps: true }
 );

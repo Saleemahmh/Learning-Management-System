@@ -21,6 +21,8 @@ router.post("/addcourse", authenticateToken, async (req, res) => {
       coursename: req.body.coursename,
       coursecode: req.body.coursecode,
       description: req.body.description,
+      price: req.body.price,
+      instructor: req.body.instructor,
     });
     await course.save();
     res.status(200).json({ message: "Course created successfully!!" });
@@ -42,6 +44,8 @@ router.put("/updatecourse", authenticateToken, async (req, res) => {
       coursename: req.body.coursename,
       coursecode: req.body.coursecode,
       description: req.body.description,
+      price: req.body.price,
+      instructor: req.body.instructor,
     });
     return res.status(200).json({ message: "Course updated successfully!!" });
   } catch (error) {

@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const Hero = () => {
   return (
     <div className="h-[75vh] flex flex-col md:flex-row items-center justify-center">

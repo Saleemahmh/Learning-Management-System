@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaGripLines } from "react-icons/fa";
+import {useSelector} from 'react-redux';
 const Navbar = () => {
   const links = [
     {
@@ -12,6 +13,7 @@ const Navbar = () => {
       link: "/allcourses",
     },
   ];
+  useSelector();
   const [mobileNav, setMobileNav] = useState("hidden");
   return (
     <>
