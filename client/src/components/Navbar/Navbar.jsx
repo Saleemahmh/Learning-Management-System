@@ -12,8 +12,18 @@ const Navbar = () => {
       title: "Courses",
       link: "/allcourses",
     },
+    {
+      title: "Dashboard",
+      link: "/dashboard",
+    },
   ];
-  useSelector();
+  const isLoggedIn = useSelector((state)=> state.auth.isLoggedIn);
+  console.log(isLoggedIn);
+
+  if(isLoggedIn === false){
+    links.splice(2,2);
+  }
+
   const [mobileNav, setMobileNav] = useState("hidden");
   return (
     <>
