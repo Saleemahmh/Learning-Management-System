@@ -49,18 +49,22 @@ const Navbar = () => {
             ))}
           </div>
           <div className="hidden md:flex gap-4">
-            <Link
-              to="/login"
-              className="hover:bg-cyan-500 hover:text-cyan-800 px-2 py-1 border border-cyan-500 rounded"
-            >
-              Login
-            </Link>
-            <Link
-              to="/register"
-              className="hover:bg-cyan-800 hover:text-cyan-200 px-2 py-1 bg-cyan-500 text-cyan-950 rounded"
-            >
-              Register
-            </Link>
+          {isLoggedIn === false ? (
+          <>
+          <Link
+          to="/login"
+          className={`${mobileNav} px-8 mb-8 text-4xl font-semibold hover:bg-cyan-500 hover:text-cyan-800 py-2 border border-cyan-500 transition-all duration-300 rounded`}
+        >
+          Login
+        </Link>
+        <Link
+          to="/register"
+          className={`${mobileNav} px-8 mb-8 text-4xl font-semibold hover:bg-cyan-800 hover:text-cyan-200 py-2 bg-cyan-500 text-cyan-950 transition-all duration-300 rounded`}
+        >
+          Register
+        </Link>
+        </>
+        ) : (<></>)}
           </div>
           <button
             className="text-cyan-200 text-2xl hover:text-cyan-400"
@@ -90,18 +94,7 @@ const Navbar = () => {
             {items.title}{" "}
           </Link>
         ))}
-        <Link
-          to="/login"
-          className={`${mobileNav} px-8 mb-8 text-4xl font-semibold hover:bg-cyan-500 hover:text-cyan-800 py-2 border border-cyan-500 transition-all duration-300 rounded`}
-        >
-          Login
-        </Link>
-        <Link
-          to="/register"
-          className={`${mobileNav} px-8 mb-8 text-4xl font-semibold hover:bg-cyan-800 hover:text-cyan-200 py-2 bg-cyan-500 text-cyan-950 transition-all duration-300 rounded`}
-        >
-          Register
-        </Link>
+        
       </div>
     </>
   );
